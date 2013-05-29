@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+
+	<title>Welcome to SAPA PDMS</title>
+
+	<!-- Included CSS Files -->
+  <link rel="stylesheet" href="stylesheets/app.css">
+  <link rel="stylesheet" href="stylesheets/offcanvas.css">
+
+  <script src="javascripts/modernizr.foundation.js"></script>
+ 
+ 
+	<style type="text/css">
+<!--
+#btnInit {
+	text-align: center;
+	font-size: 60px;
+}
+-->
+	</style>
+</head>
+
+  <body id="page" class="off-canvas slide-nav">
+	<div class="container">
+
+	<!-- <nav id="topMenu" role="navigation">
+			<ul id="nav" class="nav-bar">
+				<li><a href="index.html">Notification</a></li>
+				<li><a href="gps.html">GPS</a></li>
+				<li><a href="">Management</a></li>
+				<li><a href="">About</a></li>
+			</ul>
+		</nav> -->
+
+		<header id="header" class="row">
+		  <div class="four columns phone-two">
+		    <!-- <h1 id="site-title"><a href="http://zurb.com/playground/">ZURB</a></h1> -->
+			<img src="images/toplogo.png" width="725" height="104" alt="toplogo" longdesc="images/toplogo.png"></div>
+		  <div class="eight columns phone-two">
+		    <nav id="menu" role="navigation" class="hide-for-small">
+    			<ul id="mainNav" class="nav-bar">
+    			<li><a href="index.html">Notification</a></li>
+				<li><a href="gps.html">GPS</a></li>
+				<li><a href="">Management</a></li>
+				<li><a href="">About</a></li>
+    			</ul>
+    		</nav>
+  			<p class="show-for-small">
+  			 <a class='menu-button button' href="#bottomNav">Main Menu</a>
+  			  <a class='sidebar-button button' id="sidebarButton" href="#sidebar">Extra</a>
+  			</p>
+		  </div>
+		</header>
+
+		<div class="row">
+  		<section role="main">
+  			<h3>SAPA Poultry Disease Notification</h3>
+			
+  			<div class="row">
+  			  <div class="ten columns">
+			  <div id="slider">
+        <img src="images/image1.jpg" />
+		<img src="images/image2.jpg" />
+		<img src="images/image3.jpg" />
+		<img src="images/image4.jpg" />
+		<img src="images/image5.jpg" />
+				
+      </div>
+      		<div>  
+      		<p>Keep a pen and paper ready to note the coordinates</p>
+			<p>Ensure that the Location Services have been activated on your device</p>
+			<p>Then CLICK the button to get your coordinates GPS</p>
+<button onclick="getLocationGPS()">Get Location GPS</button>
+<p id="text1"></p>
+<script>
+  var txt=document.getElementById("text1");
+  function getLocationGPS()
+  {
+    if (navigator.geolocation)
+    {
+       navigator.geolocation.getCurrentPosition(showPositionGPS);
+    }
+    else
+    {
+       txt.innerHTML="HTML5 Geolocation is not supported by this browser.";
+     }
+  }
+  function showPositionGPS(position)
+  {
+    txt.innerHTML="Latitude = " + position.coords.latitude + 
+     "<br />Longitude = " + position.coords.longitude; 
+  }
+</script>
+	</div>  
+				
+      		</div>
+      		
+        </div>
+  		</section>
+
+  		<section id="sidebar" role="complementary">
+				<h4>Disease Management</h4>
+				<img src="images/disease-img.jpg" width="364" height="341" alt="pic1" longdesc="images/disease-img.jpg">
+<p>The PDMA intends to create a widely accessible database of
+		all diseases to assist in decision-making and provide assistance
+		in case of an outbreak.</p>
+		<img src="images/bacteria.png" width="386" height="56" alt="bacteria" longdesc="images/bacteria.png">
+		<img src="images/chlamydia.png" width="386" height="56" alt="bacteria" longdesc="images/chlamydia.png">
+		<img src="images/viruses.png" width="386" height="56" alt="bacteria" longdesc="images/viruses.png">
+  		</section>
+		</div>
+<nav id="bottomMenu" role="navigation" class="show-for-small">
+			<ul id="bottomNav" class="nav-bar">
+				<li><a href="index.html">Home</a></li>
+    			<li><a href="gps.html">GPS</a></li>
+				<li><a href="">Open</a></li>
+				<li><a href="">Open</a></li>
+				<li><a href="">Open</a></li>
+			</ul>
+		</nav>
+    <footer class="site-footer row" role="contentinfo">
+      <div class="twelve columns">
+        
+		<img src="images/rocks.png" width="524" height="74"></div>
+    </footer>
+  </div>
+
+
+	<!-- Included JS Files -->
+  <script src="javascripts/foundation/jquery.js"></script>
+  <script src="javascripts/foundation/jquery.foundation.reveal.js"></script>
+  <script src="javascripts/foundation/jquery.foundation.orbit.js"></script>
+  <script src="javascripts/foundation/jquery.foundation.forms.js"></script>
+  <script src="javascripts/foundation/jquery.placeholder.js"></script>
+  <script src="javascripts/foundation/jquery.foundation.tooltips.js"></script>
+  <script src="javascripts/foundation/jquery.foundation.alerts.js"></script>
+  <script src="javascripts/foundation/jquery.foundation.buttons.js"></script>
+  <script src="javascripts/foundation/jquery.foundation.accordion.js"></script>
+  <script src="javascripts/foundation/jquery.foundation.navigation.js"></script>
+  <script src="javascripts/foundation/jquery.foundation.mediaQueryToggle.js"></script>
+  <script src="javascripts/foundation/jquery.foundation.tabs.js"></script>
+  <script src="javascripts/foundation/jquery.offcanvas.js"></script>
+  <script src="javascripts/foundation/app.js"></script>
+
+<script src="javascripts/app.js"></script>
+    <script type="text/javascript">
+     $(window).load(function() {
+         $('#slider').orbit();
+     });
+  </script>
+
+
+</body>

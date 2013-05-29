@@ -1,0 +1,27 @@
+<!DOCTYPE html> 
+<html>
+<body>
+<p>Click the button to get your coordinates GPS</p>
+<button onclick="getLocationGPS()">Get Location GPS</button>
+<p id="text1"></p>
+<script>
+  var txt=document.getElementById("text1");
+  function getLocationGPS()
+  {
+    if (navigator.geolocation)
+    {
+       navigator.geolocation.getCurrentPosition(showPositionGPS);
+    }
+    else
+    {
+       txt.innerHTML="HTML5 Geolocation is not supported by this browser.";
+     }
+  }
+  function showPositionGPS(position)
+  {
+    txt.innerHTML="Latitude = " + position.coords.latitude + 
+     "<br />Longitude = " + position.coords.longitude; 
+  }
+</script>
+</body>
+</html>
