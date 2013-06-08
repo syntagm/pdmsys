@@ -38,6 +38,8 @@ p a, p a:visited { line-height: inherit; }
 
 #map_canvas object { max-width: none; }
 
+
+
 /* Reset for strange margins by default on <figure> elements */
 figure { margin: 0; }
 
@@ -957,6 +959,14 @@ div.progress.round .meter { -webkit-border-radius: 1000px; -moz-border-radius: 1
 
 /* Visibility Classes ---------------------- */
 /*                                           */
+/* 2X size (iPhone 4 etc)
+@media only screen and 
+        (-webkit-min-device-pixel-ratio: 1.5), only screen and 
+        (-o-min-device-pixel-ratio: 3/2), only screen and 
+        (min-device-pixel-ratio: 1.5) {
+
+} */
+
 /* Standard (large) display targeting */
 .show-for-small, .show-for-medium, .show-for-medium-down, .hide-for-large, .hide-for-large-up, .show-for-xlarge, .show-for-print { display: none !important; }
 
@@ -1015,7 +1025,7 @@ table.show-for-xlarge, table.show-for-large, table.hide-for-small, table.hide-fo
   .clearing-main-right { height: 100%; right: 0; }
   .clearing-main-right:before { content: ""; display: block; width: 0; height: 0; border: solid 16px; border-color: transparent transparent transparent white; } }
 /* Small Devices ------------ */
-@media only screen and (max-width: 767px) { /* Global Misc --- */
+@media only screen and (max-width: 767px) { /* All Mobile Sizes (devices and browser) */
   /*                 */
   .left, .right { float: none; }
   body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; width: 100%; min-width: 0; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
